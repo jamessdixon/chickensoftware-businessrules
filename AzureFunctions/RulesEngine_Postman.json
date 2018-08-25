@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "52955fdd-5fab-4327-b8bf-32258368579a",
+		"name": "ChickenSoftware",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "24e858cb-f8f5-433f-b557-ffd6ad2a121e",
+			"name": "https://chickensoftware-rulesengine.azurewebsites.net/api/zz_warehouseLookup?id=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://chickensoftware-rulesengine.azurewebsites.net/api/zz_warehouseLookup?code=Rp87X7Hf6uWVmOa9s2A/bMVK0FWiJLCz2PWxSoVRWOa/YxLyEWs5/Q==&id=1",
+					"protocol": "https",
+					"host": [
+						"chickensoftware-rulesengine",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"zz_warehouseLookup"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "Rp87X7Hf6uWVmOa9s2A/bMVK0FWiJLCz2PWxSoVRWOa/YxLyEWs5/Q=="
+						},
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "b3ba4369-e056-4bbf-a08c-bad32ff83117",
+			"name": "handleRequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Id\":\"1\",\n\"FirstName\":\"Test\",\n\"LastName\":\"Customer\",\n\"EMail\":\"test@aol.com\",\n\"Order\":{\"Id\":\"1\",\"OpenedDate\":\"08/02/2018\",\"LineItems\":[\n{\"Id\":\"1\",\"BilledAmount\":\"30\",\"Discount\":\"0\",\"Tax\":\"2\",\"Product\":{\"Id\":\"1\",\"Sku\":\"ASB123\"}},\n{\"Id\":\"1\",\"BilledAmount\":\"40\",\"Discount\":\"0\",\"Tax\":\"3\",\"Product\":{\"Id\":\"2\",\"Sku\":\"ABC456\"}}\n]}\n}"
+				},
+				"url": {
+					"raw": "https://chickensoftware-rulesengine.azurewebsites.net/api/handleRequest",
+					"protocol": "https",
+					"host": [
+						"chickensoftware-rulesengine",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"handleRequest"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
